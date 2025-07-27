@@ -1,68 +1,351 @@
-/* Flex layout setup */
-
-body {
-  display: flex;
-  flex-direction: column; /* Stack header, main, footer vertically */
-  height: 100vh;
-}
-
-main {
-  display: flex;
-  flex-direction: row; /* Place article and aside side-by-side */
-  flex: auto;          /* Let main take available space */
-}
-
-article {
-  flex: 2;             /* Takes 2/3 of the width */
-  overflow-y: auto;    /* Enable vertical scroll if content overflows */
-}
-
-aside {
-  flex: 1;             /* Takes 1/3 of the width */
-  overflow-y: auto;    /* Enable vertical scroll if content overflows */
-}
-body {
-  background-color: #F9F7FB;
-  color: #333333;
-}
-
 header {
-  background-color: #FFFFFF;
-  border-bottom: 2px solid #E1BEE7;
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  
 }
 
-.logo {
-  color: #4B3F72;
-  font-size: 36px;
+header .logo img {
+  height: 40px;
+  text-decoration: none;
+  font-size: 0.9rem;
   font-weight: bold;
-  margin-right: 15px;
+  color: #161615; 
+  letter-spacing: 1px;
 }
 
-a {
-  color: #4B3F72;
-  transition: color 0.3s ease;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-a:hover {
-  color: #E1BEE7;
+nav a {
+  text-decoration: none;
+  color: #141414;
+  font-weight: 600;
+}
+.banner {
+  background-image: url("images/Object.png") ;
+  background-size: cover;
+  background-position: center;
+  color: rgb(36, 35, 35);
+  text-align: center;
+  padding: 50px 10px;
+  height: 700px;
 }
 
-article {
-  background-color: #FFFFFF;
+.banner h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #fffdfd;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #f8f4f4;
+}
+
+.banner button {
+  padding: 12px 24px;
+  background-color: #9e32be;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 70px;
+  cursor: pointer;
+  margin-top: 40px;
+  box-shadow: #4e4e4e;
+
+}
+.banner h3 {
+  text-decoration: none;
+  color:white;
+  font-weight: 600;
+}
+.banner h2 {
+  color:#9e32be;
+  margin-top: 120px;
+}
+.banner span{
+  color: white;
+  margin-right: 30px;
+  font-size: 20px;
+}
+.img {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 100px; 
+}
+
+
+.quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 100px 20px 60px;
+  background-color: #cd70e9;
+  text-align: left;
+}
+
+.quote img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.quote-text blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+
+.quote-text cite h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.quote-text cite p {
+  font-size: 0.95rem;
+  color: white;
+}
+
+.videos {
+  max-width: ;
+  margin: 0 auto;
+  padding: ;
+}
+
+#hh {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+
+.video-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+
+.video-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  text-align: center; 
+  
+}
+
+
+
+.video-card img {
+  width: 100%;
+  border-radius: 8px;
+
+}
+
+.video-info h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.video-info p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+
+.author h4 {
+  font-size: 0.95rem;
+  margin: 0;
+
+
+}
+
+.rating {
+  color: #ffc107;
+  margin: 5px 0;
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: #ffc107;
+}
+
+
+.membership {
+  background-color: #071629;
+  padding: 50px 10px;
+  text-align: center;
+  border-radius: 50px;
+
+
+}
+
+.membership h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.membership .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  background-color: ;
+  padding: 30px;
+}
+
+.membership .card {
+  background-color: #071629;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(75, 63, 114, 0.1);
+  padding: 30px 20px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-aside {
-  background-color: #F3E5F5;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(75, 63, 114, 0.1);
+.membership .card img {
+  width: 100%;
+  max-width: 100px;
+  margin-bottom: 20px;
 }
+
+.membership .card h3 {
+  font-size: 20px;
+  color: #071629;
+  margin-bottom: 10px;
+}
+
+.membership .card p {
+  font-size: 16px;
+  color: white;
+}
+
+.membership button{
+font-size: 16px;
+  margin-top: 40px;
+  border-radius: 70px;
+  padding: 12px 24px;
+  background-color: #9e32be;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: #4e4e4e;
+ 
+}
+.faq {
+  background-color: #f2f2f2;
+  padding: 80px 20px;
+  text-align: center;
+  
+}
+
+
+.faq-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+.faq h2 {
+  font-size: 36px;
+  color: #071629;
+  margin-bottom: 50px;
+}
+
+.faq .question {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: left;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+ 
+}
+
+.faq .question h3 {
+  font-size: 20px;
+  color: #071629;
+  margin-bottom: 10px;
+}
+
+.faq .question p {
+  font-size: 16px;
+  color: #6c757d;
+}
+
 
 footer {
-  background-color: #4B3F72;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
+ display: flex;
+  justify-content: space-between;
+  align-items: ;
+  padding: 20px 40px;
+  background-color: #0a0a23;
+  color: #ccc;
+  
 }
+
+footer .logo img {
+  height: ;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ccc; 
+  letter-spacing: 1px;
+}
+
+.socials ul{
+  list-style: none;
+  display: flex;
+  margin-left: 600%;
+  margin-top: -20%;
+  gap: 20px;
+}
+
+.socials i {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 600;
+}
+.footer p {
+  font-size: 14px;
+  color: #807d7d;
+  margin-top: 30px;
+  text-align: center;
+  }
+
+ 
