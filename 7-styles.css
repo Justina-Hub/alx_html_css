@@ -1,0 +1,46 @@
+/* Fade-in animation for hero section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Hover animation for buttons */
+.button {
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background-color: #ff3c00;
+  color: white;
+}
+
+/* Slide in animation for sections */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.what-we-do,
+.our-results,
+.contact-section,
+.pentagon-section {
+  animation: slideIn 1.2s ease forwards;
+}
+

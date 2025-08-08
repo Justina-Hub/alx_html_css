@@ -1,0 +1,43 @@
+/* Hamburger base styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+  .nav.open {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
