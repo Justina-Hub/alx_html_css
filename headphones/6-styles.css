@@ -1,0 +1,27 @@
+/* Pentagon Shape */
+.pentagon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.pentagon {
+  position: relative;
+  width: 100px;
+  border-width: 0 50px 86.6px;
+  border-style: solid;
+  border-color: transparent transparent #000000;
+  margin: 0 auto;
+}
+
+.pentagon::after {
+  content: "";
+  position: absolute;
+  top: -57.7px;
+  left: -50px;
+  width: 0;
+  border-style: solid;
+  border-width: 57.7px 50px 0;
+  border-color: #000000 transparent transparent transparent;
+}
